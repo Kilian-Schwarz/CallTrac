@@ -8,10 +8,10 @@
 4. Hier werdet ihr durch alle schritte durchgeleitet.
 
 
-Wenn ihr hilfe bracht macht ein Ticket auf dem discord von bcbit auf.
+Wenn ihr Hilfe bracht, macht ein Ticket auf dem Discord von bcbit auf.
 
 # ACHTUNG
-Bitte beachtet das ihr beim nutzen keine weiteren Programme die P2P nutzen offen habt z.B. :
+Bitte beachtet das ihr beim Nutzen keine weiteren Programme, die P2P nutzen offen habt z.B. :
 Skype, Discord, Whatsapp, Telegramm, ...
 
 
@@ -21,5 +21,5 @@ Unterstützt durch bcbit : https://discord.gg/gfvj7MCRQu
 
 
 # Info
-Ich übernehme keine haftung für jegliche nutzung und auswürkungen des Programmes.
-Dieses Programm ist für eigene Testzwecke endstanden und soll auch dafür genutzt werden.
+Ich übernehme keine Haftung für jegliche Nutzung und Auswirkungen des Programmes.
+Dieses Programm ist für eigene Testzwecke Endstanden und soll auch dafür genutzt werden.

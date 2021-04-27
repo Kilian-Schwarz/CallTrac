@@ -15,5 +15,5 @@ Skype, Discord, Whatsapp, Telegramm, ...
 
 
 
-# Support - Unterstützung - ideen
+# Support - Unterstützung - Ideen
 Unterstützt durch bcbit : https://discord.gg/gfvj7MCRQu

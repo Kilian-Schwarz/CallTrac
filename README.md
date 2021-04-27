@@ -14,4 +14,6 @@ Bitte beachtet das ihr beim nutzen keine weiteren Programme die P2P nutzen offen
 Skype, Discord, Whatsapp, Telegramm, ...
 
 
+
+# Support - Unterstützung - ideen
 Unterstützt durch bcbit : https://discord.gg/gfvj7MCRQu

@@ -9,6 +9,9 @@
 
 Wenn ihr hilfe bracht macht ein Ticket auf dem discord von bcbit auf.
 
+# ACHTUNG
+Bitte beachtet das ihr beim nutzen keine weiteren Programme die P2P nutzen offen habt z.B. :
+Skype, Discord, Whatsapp, Telegramm, ...
 
 
 Unterstützt durch bcbit : https://discord.gg/gfvj7MCRQu

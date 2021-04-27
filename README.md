@@ -18,3 +18,8 @@ Skype, Discord, Whatsapp, Telegramm, ...
 
 # Support - Unterstützung - Ideen
 Unterstützt durch bcbit : https://discord.gg/gfvj7MCRQu
+
+
+# Info
+Ich übernehme keine haftung für jegliche nutzung und auswürkungen des Programmes.
+Dieses Programm ist für eigene Testzwecke endstanden und soll auch dafür genutzt werden.

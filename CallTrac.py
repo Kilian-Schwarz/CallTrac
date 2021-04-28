@@ -131,17 +131,9 @@ os.system('mode con: cols=71 lines=30')
 
 cmd = r"C:\Program Files\Wireshark\tshark.exe -i " + number
 
-
-
-# if ethernet try
-# cmd = r"C:\Program Files\Wireshark\tshark.exe -i ethernet"
-
-# you can list all your interfaces by running "tshark.exe --list-interfaces"
-# then if for instance you want to use the 4th try:
-# cmd = r"C:\Program Files\Wireshark\tshark.exe -i 4"
 IP_BEFOR = "0"
 process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-my_ip = socket.gethostbyname(socket.gethostname())
+myip = socket.gethostbyname(socket.gethostname())
 
 
 
@@ -153,7 +145,7 @@ def sendlog(ip):
 
 
 
-def get_ip_location(ip):
+def getip(ip):
     location = requests.get(f'http://extreme-ip-lookup.com/json/{ip}')
     geo = location.json()
     clear()
@@ -179,7 +171,7 @@ def get_ip_location(ip):
     return
 
 
-get_ip_location("8.8.8.8")
+getip("8.8.8.8")
 
 
 
@@ -192,29 +184,29 @@ for line in iter(process.stdout.readline, b""):
         
         # for different tshark versions
         if "->" in columns:
-            src_ip = columns[columns.index("->") - 1]
+            sip = columns[columns.index("->") - 1]
         elif "\\xe2\\x86\\x92" in columns:
-            src_ip = columns[columns.index("\\xe2\\x86\\x92") - 1]
+            sip = columns[columns.index("\\xe2\\x86\\x92") - 1]
         else:
             continue
             
-        if src_ip == my_ip:
+        if sip == myip:
             continue
-        if src_ip == IP_BEFOR:
+        if sip == IP_BEFOR:
             continue
 
-        result = src_ip.startswith(('192.168.', '10.', '172.16.'))
+        result = sip.startswith(('192.168.', '10.', '172.16.'))
         if result:
             continue
 
         try:
-            get_ip_location(src_ip)
-            IP_BEFOR = src_ip
+            getip(sip)
+            IP_BEFOR = sip
         except:
             try:
-                real_ip = socket.gethostbyname(src_ip)
-                get_ip_location(real_ip)
-                IP_BEFOR = real_ip
+                realip = socket.gethostbyname(sip)
+                getip(realip)
+                IP_BEFOR = realip
             except:
                 clear()
                 print("Not found")

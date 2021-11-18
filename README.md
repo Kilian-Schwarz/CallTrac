@@ -3,7 +3,7 @@
 # Vorbereitung
 
 1. Installiert euch WireShark: https://www.wireshark.org/
-2. ladet euch CallTrac herunter : https://github.com/Kilian-Schwarz/CallTrac/releases/latest/download/CallTrac.zip
+2. ladet euch CallTrac herunter : https://github.com/Kilian-Schwarz/CallTrac/releases/latest/download/CallTrac.exe
 3. Startet CallTrac
 4. Hier werdet ihr durch alle schritte durchgeleitet.
 

@@ -17,6 +17,7 @@ Skype, Discord, Whatsapp, Telegramm, ...
 # Virus Meldung
 Leider wird bei vielen ein Pythen Programm als Virus dargestellt dies ist es aber nicht:
 https://www.virustotal.com/gui/file/64d8b8205cd75f5c0ad6574ce9e104106e15eac4066c63d07250418019227c0c/detection
+
 v. 0.3.4 : https://www.virustotal.com/gui/file/70b61dde0d6e3cab7421030965534ec94c78ea93f4fc1bc7c18c115de279c66e/relations
 ![image](https://user-images.githubusercontent.com/60436288/116395524-85ae1700-a824-11eb-8995-7fe82aa548d0.png)
 ![image](https://user-images.githubusercontent.com/60436288/116395537-8b0b6180-a824-11eb-892d-aa4dfd321ee2.png)

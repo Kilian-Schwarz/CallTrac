@@ -9,7 +9,7 @@ v_json = "Lade"
 v_tshark = "Lade"
 v_process = "Lade"
 
-i_version = "0.3.3"
+i_version = "0.3.4"
 
 def loading(v_socket, v_process,v_os, v_time, v_datetime, v_tabulate, v_termcolor, v_requests, v_json, v_tshark):
     os.system('cls')
@@ -121,7 +121,7 @@ Starttime = datetime.now().strftime("%H-%M-%p")
 clear = lambda: os.system('cls')
 os.system("echo -----------------------------------------------------------   ")
 os.system('"C:\\Program Files\\Wireshark\\tshark.exe" --list-interfaces')
-os.system('ncpa.cpl')
+#os.system('ncpa.cpl')
 number = input("Bitte Gib die nummer von deinem Internetnetzwerk ein: ")
 
 
@@ -134,7 +134,6 @@ cmd = r"C:\Program Files\Wireshark\tshark.exe -i " + number
 IP_BEFOR = "0"
 process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 myip = socket.gethostbyname(socket.gethostname())
-
 
 
 def sendlog(ip):
@@ -155,7 +154,7 @@ def getip(ip):
     ['City', geo['city']],
     ['Country', geo['country']],
     ['Country Code', geo['countryCode']],
-    ['ISP', geo['region']],
+    ['ISP', geo['isp']],
     ['lat', geo['lat']],
     ['lon', geo['lon']],
     ['Organisation', geo['org']],
@@ -163,11 +162,10 @@ def getip(ip):
     ['status', geo['status']],
     ['timezone', geo['timezone']],
     ['ZIP', geo['zip']],
-    ['Version 0.3.1', "by Kilian Schwarz : https://github.com/Kilian-Schwarz"]],
+    [f'Version {i_version}', "by Kilian Schwarz : https://github.com/Kilian-Schwarz"]],
      tablefmt='fancy_grid'))
 
     sendlog(ip)
-
     return
 
 
@@ -181,33 +179,33 @@ for line in iter(process.stdout.readline, b""):
     columns = str(line).split(" ")
 
     if "SKYPE" in columns or "UDP" in columns:
+        if not "gateway.discord.gg" in columns or "i3Dnet" in columns:
+            # for different tshark versions
+            if "->" in columns:
+                sip = columns[columns.index("->") - 1]
+            elif "\\xe2\\x86\\x92" in columns:
+                sip = columns[columns.index("\\xe2\\x86\\x92") - 1]
+            else:
+                continue
 
-        # for different tshark versions
-        if "->" in columns:
-            sip = columns[columns.index("->") - 1]
-        elif "\\xe2\\x86\\x92" in columns:
-            sip = columns[columns.index("\\xe2\\x86\\x92") - 1]
-        else:
-            continue
+            if sip == myip:
+                continue
+            if sip in Session_ip_list:
+                continue
 
-        if sip == myip:
-            continue
-        if sip in Session_ip_list:
-            continue
+            result = sip.startswith(('192.168.', '10.', '172.16.'))
+            if result:
+                continue
 
-        result = sip.startswith(('192.168.', '10.', '172.16.'))
-        if result:
-            continue
-
-        try:
-            getip(sip)
-            Session_ip_list.append(sip)
-        except:
             try:
-                realip = socket.gethostbyname(sip)
-                getip(realip)
-                IP_BEFOR = realip
+                getip(sip)
+                Session_ip_list.append(sip)
             except:
-                clear()
-                print("Not found")
-                print("by Kilian Schwarz : https://github.com/Kilian-Schwarz")
+                try:
+                    realip = socket.gethostbyname(sip)
+                    getip(realip)
+                    IP_BEFOR = realip
+                except:
+                    clear()
+                    print("Not found")
+                    print("by Kilian Schwarz : https://github.com/Kilian-Schwarz")

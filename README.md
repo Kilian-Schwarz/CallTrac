@@ -21,11 +21,6 @@ v. 0.3.4 : https://www.virustotal.com/gui/file/70b61dde0d6e3cab7421030965534ec94
 ![image](https://user-images.githubusercontent.com/60436288/116395524-85ae1700-a824-11eb-8995-7fe82aa548d0.png)
 ![image](https://user-images.githubusercontent.com/60436288/116395537-8b0b6180-a824-11eb-892d-aa4dfd321ee2.png)
 
-
-# Support - Unterstützung - Ideen
-Unterstützt durch bcbit : https://discord.gg/gfvj7MCRQu
-
-
 # Info
 Ich übernehme keine Haftung für jegliche Nutzung und Auswirkungen des Programmes.
 Dieses Programm ist für eigene Testzwecke Endstanden und soll auch dafür genutzt werden.

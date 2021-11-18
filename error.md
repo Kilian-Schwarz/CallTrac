@@ -2,10 +2,6 @@
 
 ## Download
 
-Beispiel# Problem Behandlung
-
-## Download
-
 Beispiel an edge
 
 ![image](https://user-images.githubusercontent.com/60436288/142470342-d13e11b9-619e-4ff7-a47f-158b0891e101.png)
